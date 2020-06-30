@@ -1,3 +1,4 @@
+import { TinyEditorComponent } from './tiny-editor/tiny-editor.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -11,6 +12,10 @@ const routes: Routes = [{
     {
       path: 'dashboard',
       component: DashboardComponent,
+    },
+    {
+      path: 'tiny-editor',
+      component: TinyEditorComponent,
     },
     {
       path: '',

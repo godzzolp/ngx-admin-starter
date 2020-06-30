@@ -1,5 +1,9 @@
+import { TinyEditorComponent } from './tiny-editor/tiny-editor.component';
+
+import { EditorModule } from '@tinymce/tinymce-angular';
+
 import { NgModule } from '@angular/core';
-import { NbMenuModule } from '@nebular/theme';
+import { NbMenuModule, NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -11,10 +15,16 @@ import { PagesRoutingModule } from './pages-routing.module';
     PagesRoutingModule,
     ThemeModule,
     NbMenuModule,
+    NbCardModule,
+
+    EditorModule,
+
     DashboardModule,
   ],
   declarations: [
     PagesComponent,
+
+    TinyEditorComponent,
   ],
 })
 export class PagesModule {

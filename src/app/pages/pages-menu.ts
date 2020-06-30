@@ -8,6 +8,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'Tiny Editor',
+    icon: 'edit-outline',
+    link: '/pages/tiny-editor',
+  },
+  {
     title: 'FEATURES',
     group: true,
   },
