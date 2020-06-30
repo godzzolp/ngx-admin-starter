@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'ngx-tiny-editor',
@@ -18,4 +19,15 @@ export class TinyEditorComponent {
       alignleft aligncenter alignright alignjustify | \
       bullist numlist outdent indent | removeformat | help',
   };
+
+  formGroup: FormGroup;
+
+  constructor(
+    protected formBuilder: FormBuilder,
+  ) {
+    this.formGroup = this.formBuilder.group({
+      title: 'Something happened 🤠',
+      text: `<h1>Hello World 👻</h1>`,
+    });
+  }
 }

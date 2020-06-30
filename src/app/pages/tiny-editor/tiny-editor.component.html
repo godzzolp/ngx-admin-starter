@@ -1,13 +1,26 @@
 <div class="row">
-  <nb-card>
-    <nb-card-header>
-      Tiny MCE Tester Component
-    </nb-card-header>
-    <nb-card-body>
-      <editor
-        apiKey="tikjn3g54pwvmlh69ob90y1u4higpeo6khqjoui5hss2wxu6"
-        [init]="config"
-      ></editor>
-    </nb-card-body>
-  </nb-card>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>
+        Tiny MCE Tester Component
+      </nb-card-header>
+      <nb-card-body [formGroup]="formGroup">
+        <editor
+          formControlName="text"
+          apiKey="tikjn3g54pwvmlh69ob90y1u4higpeo6khqjoui5hss2wxu6"
+          [init]="config"
+        ></editor>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>
+        Tiny MCE Tester Component
+      </nb-card-header>
+      <nb-card-body>
+        {{ formGroup.value | json }}
+      </nb-card-body>
+    </nb-card>
+  </div>
 </div>
