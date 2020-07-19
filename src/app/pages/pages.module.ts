@@ -3,7 +3,7 @@ import { TinyEditorComponent } from './tiny-editor/tiny-editor.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 
 import { NgModule } from '@angular/core';
-import { NbMenuModule, NbCardModule } from '@nebular/theme';
+import { NbMenuModule, NbCardModule, NbTabsetModule, NbButtonModule } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -20,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ThemeModule,
     NbMenuModule,
     NbCardModule,
+    NbTabsetModule,
+    NbButtonModule,
 
     EditorModule,
 

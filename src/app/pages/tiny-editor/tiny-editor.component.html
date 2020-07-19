@@ -3,9 +3,27 @@
     <nb-card>
       <nb-card-header>
         Tiny MCE Tester Component
+        <button
+          class="float-right"
+          (click)="toggleEditor()"
+          nbButton
+          status="primary"
+        >
+          Toggle Editor
+        </button>
       </nb-card-header>
       <nb-card-body [formGroup]="formGroup">
+        <nb-tabset
+          (changeTab)="changeTab($event)"
+        >
+          <nb-tab tabTitle="Adatok">
+            <h2>Data</h2>
+          </nb-tab>
+          <nb-tab tabTitle="Vmi más">
+          </nb-tab>
+        </nb-tabset>
         <editor
+          *ngIf="showEditor"
           formControlName="text"
           apiKey="tikjn3g54pwvmlh69ob90y1u4higpeo6khqjoui5hss2wxu6"
           [init]="config"

@@ -6,6 +6,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './tiny-editor.component.html',
 })
 export class TinyEditorComponent {
+  showEditor = true;
+
   config = {
     height: 500,
     menubar: false,
@@ -29,5 +31,15 @@ export class TinyEditorComponent {
       title: 'Something happened 🤠',
       text: `<h1>Hello World 👻</h1>`,
     });
+  }
+
+  toggleEditor() {
+    this.showEditor = ! this.showEditor;
+  }
+
+  changeTab($event) {
+    console.log('changeTab', $event);
+
+    this.toggleEditor();
   }
 }
