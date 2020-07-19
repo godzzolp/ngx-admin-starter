@@ -11,6 +11,8 @@ export class TinyEditorComponent {
   config = {
     height: 500,
     menubar: false,
+    base_url: '/tinymce', // Root for resources
+    suffix: '',        // .min Suffix to use when loading resources
     plugins: [
       'advlist autolink lists link image charmap print preview anchor',
       'searchreplace visualblocks code fullscreen',
