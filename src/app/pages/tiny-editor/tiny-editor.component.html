@@ -19,7 +19,11 @@
           <nb-tab tabTitle="Adatok">
             <h2>Data</h2>
           </nb-tab>
-          <nb-tab tabTitle="Vmi más">
+          <nb-tab tabTitle="Vmi más" lazyLoad="true">
+            <editor
+              [init]="config"
+              formControlName="text"
+            ></editor>
           </nb-tab>
         </nb-tabset>
         <editor
